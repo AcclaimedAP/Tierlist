@@ -10,19 +10,19 @@ export default {
         <h2>{{ tier }}</h2>
         <div class="characterPortrait">
             <div class="imageContainer">
-                <img src="https://api.genshin.dev/characters/qiqi/portrait" alt="placeholder image">
+                <img src="/public/mockimage/portrait.webp" alt="placeholder image">
             </div>
             <h3>Qiqi</h3>
         </div>
         <div class="characterPortrait">
             <div class="imageContainer">
-                <img src="https://api.genshin.dev/characters/qiqi/portrait" alt="placeholder image">
+                <img src="/public/mockimage/portrait.webp" alt="placeholder image">
             </div>
             <h3>Qiqi</h3>
         </div>
         <div class="characterPortrait">
             <div class="imageContainer">
-                <img src="https://api.genshin.dev/characters/qiqi/portrait" alt="placeholder image">
+                <img src="/public/mockimage/portrait.webp" alt="placeholder image">
             </div>
             <h3>Qiqi</h3>
         </div>
