@@ -1,6 +1,11 @@
 <script>
+import characterContainer from './characterContainer.vue';
+
 export default {
-    props: ['tier']
+    components: {
+        characterContainer
+    },
+    props: ["tier", "characters"],
 }
 </script>
 
@@ -8,24 +13,8 @@ export default {
 
     <div class="tierContainer">
         <h2>{{ tier }}</h2>
-        <div class="characterPortrait">
-            <div class="imageContainer">
-                <img src="/public/mockimage/portrait.webp" alt="placeholder image">
-            </div>
-            <h3>Qiqi</h3>
-        </div>
-        <div class="characterPortrait">
-            <div class="imageContainer">
-                <img src="/public/mockimage/portrait.webp" alt="placeholder image">
-            </div>
-            <h3>Qiqi</h3>
-        </div>
-        <div class="characterPortrait">
-            <div class="imageContainer">
-                <img src="/public/mockimage/portrait.webp" alt="placeholder image">
-            </div>
-            <h3>Qiqi</h3>
-        </div>
+        <characterContainer v-for="character in characters" :key="character.name" :name="character.name"/>
+
     </div>
 
 </template>
@@ -38,25 +27,9 @@ export default {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    .characterPortrait {
-        background-color: rgba(255, 255, 255, 0.1);
-        margin: 10px;
-        .imageContainer {
-            max-height: 100px;
-            overflow: hidden;
-            img {
-                max-height: 200px;
-            }
-        }
-        h3 {
-            margin: 5px;
-
-        }
-    }
-
 
     h2 {
-      height: 140px;
+      height: 150px;
       aspect-ratio: 1 / 1;
       background-color: rgba(255, 255, 255, 0.1);
       margin: 10px;

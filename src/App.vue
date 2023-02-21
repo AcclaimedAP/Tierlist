@@ -4,7 +4,18 @@ import tierContainer from './components/tierContainer.vue';
 export default {
   data() {
     return {
-      tiers: ['S+', 'S', 'A', 'B', 'C', 'D', 'Unranked']
+      tiers: ['S+', 'S', 'A', 'B', 'C', 'D', 'Unranked'],
+      characters: [
+        {
+        name: "keqing"
+        },
+        {
+        name: "qiqi"
+        },
+        {
+        name: "mona"
+      }
+      ]
     }
   },
   components: {
@@ -15,7 +26,7 @@ export default {
 
 <template>
   <div class="container"><h1>Tier list</h1>
-    <tierContainer v-for="tier in tiers" :key="tier.tiers" :tier="tier" />
+    <tierContainer v-for="tier in tiers" :key="tier.tiers" :tier="tier" :characters="characters"/>
   
   </div>
 </template>
